@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <title>
+    <%= pageTitle %>
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <%- include("../partials/navbar.ejs") %>
+
+    <div class="container mx-auto">
+      <h1 class="mb-4">
+        <%= pageTitle %>
+      </h1>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-3">
+              <div class="home-section-image">
+                <img src="img\awsnap.png" alt="picture">
+              </div>
+            </div>
+            <div class="col-9">
+              <div class="home-section-text">
+                <h2>This is actual header</h2>
+                <p>To make this home page follow the rules and have actual content, here thou shall have the assignment
+                  info</p>
+                <p>Create a web server with Node.js and Express. Add four routes to your application:<br />
+                  “/”,<br />
+                  “/guestbook”,<br />
+                  “/newmessage” and<br />
+                  “/ajaxmessage”.</p>
+
+                <p>"/" –route will render the front page of your site. You can use any available HTML template or just
+                  develop one by yourself. The page should have navigation links which lead to the other application
+                  routes. (Template repository: Search google)></p>
+
+                <p>"/guestbook" –route will load a JSON-file and parse it on the page as a formatted table (use either
+                  Bootstrap or Pure.css or similar to style the table). Sample JSON file is available here;
+                  http://pastebin.com/VpbJqSicLinks to an external site..</p>
+
+                <p>"/newmessage" –route render an input form to the page. Form should have fields for the following
+                  data:<br />
+                  username,<br />
+                  country and<br />
+                  message and<br />
+                  a button which enables user to send it. Don’t allow empty fields to be submitted</p>
+
+
+                <p>When user submit the form, collected data will be saved as JSON element into the data file.</p>
+
+                <p>"/ajaxmessage" will render similar form to the user. The only difference is, that the Submit-button
+                  does not post the form, but it runs a Javascript-code which will collect the data from the text fields
+                  and send them to the back-end as AJAX-call. It will then return all the messages as a response to the
+                  page, under the form. You can use native Javascript or jQuery to implement the code.</p>
+
+                <p>Publish the application in your GitHub repository, deploy to Render.com and return both links.</p>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="guestbook-entry">
+            <div class="entry">
+              <p class="message">
+                <%= randomEntry.message %>
+              </p>
+              <p class="username">
+                <%= randomEntry.username %>
+              </p>
+              <p class="date">
+                <%= new Date(randomEntry.date).toLocaleString('fi-FI', {timeZone: 'UTC' , year: 'numeric' ,
+                  month: 'numeric' , day: 'numeric' , hour: '2-digit' , minute: '2-digit' }) %>
+              </p>
+              <p class="country">
+                <%= randomEntry.country %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+
+      <%- include("../partials/footer.ejs") %>
+
+    </footer>
+</body>
+
+</html>
