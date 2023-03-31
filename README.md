@@ -21,7 +21,8 @@ Install depencies using `npm install` and to start server use `node app.js`
 
 
 app.js rewrites guestData.json every time server starts up on lines 5 -> 48.
-```//--THIS IS FOR EASIER JSON CLEANUP BY RESTARTING SERVER--/
+```
+//--THIS IS FOR EASIER JSON CLEANUP BY RESTARTING SERVER--/
 // initial guest data
 const initialGuestData = [
   {
@@ -38,7 +39,8 @@ const initialGuestData = [
 // overwrite guestData.json on server start
 fs.writeFileSync("guestData.json", JSON.stringify(initialGuestData));
 console.log("guestData.json overwritten")
-//--JSON CLEANUP END--//```
+//--JSON CLEANUP END--// 
+```
 
 
 -Eetu "sip1n" Siponen
