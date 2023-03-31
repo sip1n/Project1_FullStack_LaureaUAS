@@ -2,7 +2,7 @@
   "name": "project1_fullstack_laureauas",
   "version": "0.0.1",
   "description": "Project work for Full Stack-course in Laurea UAS",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -47,6 +47,7 @@ fs.writeFileSync("guestData.json", JSON.stringify(initialGuestData));
 console.log("guestData.json overwritten")
 //--JSON CLEANUP END--//
 
+
 const app = express();
 const port = 3000;
 
@@ -140,7 +141,7 @@ app.route("/ajaxmessage")
 
     // check that all fields are filled out
     if (!username || !country || !message) {
-      return res.status(400).json({ error: "Please fill in all fields" });
+      return res.status(400).send("All fields are required.");
     }
 
     // create a new entry object with the data
