@@ -41,5 +41,4 @@ console.log("guestData.json overwritten")
 //--JSON CLEANUP END--//```
 
 
-'*Yours truly,
-Eetu Siponen*'
+-Eetu "sip1n" Siponen
