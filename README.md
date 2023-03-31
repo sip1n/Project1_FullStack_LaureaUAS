@@ -1,7 +1,7 @@
 # Project #1 / Fullstack programming / Laurea UAS
 
 
-### Runnin on Render.com
+### Running on Render.com
 #### https://projekti1-guestbook.onrender.com 
 
 ![Picture of EJS layout plan](public/img/sivuleiska.png)
